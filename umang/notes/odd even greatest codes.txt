@@ -1,0 +1,79 @@
+
+# To print string length
+
+if (isset($_POST['submit'])){
+    $Table =$_POST["Table"];
+
+if (!preg_match ("/^[a-zA-Z]*$/", $Table) ){  
+    $ErrMsg = "Only alphabet value is allowed";  
+    echo $ErrMsg;die;  
+}  
+
+$name= strlen($Table);
+echo $name;
+}
+
+===========================================================================================================================
+
+# To print odd or even on submit click
+
+
+if (isset($_POST['submit'])){
+    $Table =$_POST["Table"];
+
+if (!preg_match ("/^[0-9]*$/", $Table) ){  
+    $ErrMsg = "Only numeric value is allowed";  
+    echo $ErrMsg;die;  
+}  
+
+
+
+
+    // for ($i=$Table; $i<=100; $i++)
+   
+    if($Table%2 == 0){
+        echo "Even";
+       }
+
+    else{
+
+        echo "odd";
+    }
+    
+}
+
+
+========================================================================================================================================
+# Greater value in out=put
+
+
+
+
+
+if (isset($_POST['submit'])){
+    $A =$_POST["A"];
+    $B =$_POST["B"];
+    $C =$_POST["C"];
+
+// if (!preg_match ("/^[0-9]*$/", $Table) ){  
+//     $ErrMsg = "Only numeric value is allowed";  
+//     echo $ErrMsg;die;  
+// }  
+
+
+$a = $A;
+$b = $B;
+$c = $C;
+
+$Greatest = $a;
+
+if ($b > $Greatest) {
+    $Greatest=$b;
+} 
+ if($c > $Greatest){
+    $Greatest=$c;
+ }  
+
+ echo $Greatest;
+
+}

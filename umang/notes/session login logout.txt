@@ -1,0 +1,45 @@
+session create
+====================
+
+<?php
+session_start();
+
+$_SESSION['username']= "umang";
+$_SESSION['favcat']= "Books";
+
+echo "variable set";
+?>
+
+===================================================
+
+Session initiate
+==================
+
+
+<?php
+session_start();
+
+if(isset($_SESSION['username'])){
+
+echo "Welcome ". $_SESSION['username'];
+echo "<br>your fav category is ". $_SESSION['favcat'];
+}else{
+    echo "Please login to continue";
+}
+
+?>
+
+
+================================================================
+
+session logout
+===============
+
+<?php
+session_start();
+session_unset();
+session_destroy();
+
+echo "you have been logout";
+
+?>

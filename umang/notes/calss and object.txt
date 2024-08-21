@@ -1,0 +1,50 @@
+<?php
+class Cal {
+
+    public $num1;
+    public $num2;
+    public $num3;
+
+    public function add($num1, $num2, $num3) {
+        return  $this->num1=$num1 + $this->num1=$num2 + $this->num3=$num3;
+    }
+
+    public  function subtract($num1, $num2) {
+        return $this->num1=$num1 - $this->num1=$num2;
+    }
+
+    public function multiply($num1, $num2) {
+        return $this->num1=$num1 * $this->num1=$num2;
+    }
+}
+
+// $calculator = new cal();
+
+// echo "addition: " .$calculator->add(1, 8)."<br>";
+// echo "subtraction: " .$calculator->subtract(1, 8)."<br>";
+// echo "multiply: " .$calculator->multiply(1, 8)."<br>";
+
+
+
+?>  
+
+
+----------------------------------------------------------------------
+
+Inheritance
+============
+
+<?php
+
+include ("index.php");
+
+class Math extends Cal {
+
+
+}
+
+$calculator = new Math();
+
+echo "addition: " .$calculator->add(8, 8, 10)."<br>";
+echo "subtraction: " .$calculator->subtract(16, 8)."<br>";
+echo "multiply: " .$calculator->multiply(16, 8)."<br>";

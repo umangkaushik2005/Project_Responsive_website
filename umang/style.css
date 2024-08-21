@@ -1,0 +1,15 @@
+.div{
+
+    height: 100px;
+    width: 100px;
+    border: 10px solid black;
+    border-radius: 20px;
+    background-color: red;
+    color: black;
+}
+
+
+#change2 {
+
+    visibility: hidden;
+}

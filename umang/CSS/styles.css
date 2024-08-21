@@ -1,0 +1,96 @@
+ 
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: whitesmoke; */
+    background-image: url(https://img.freepik.com/free-photo/weathered-blue-page_53876-88602.jpg);
+    background-size: cover;
+  }
+
+
+  /* img{
+
+  width: 100px;
+  } */
+
+
+  .logo{
+
+    margin-left: 100px;
+    margin-bottom: 2px;
+  }
+
+
+  .login-container {
+    width: 250px;
+    height: 300px;
+    margin: 100px auto;
+    margin-left: 500px;
+    margin-top: 100px;
+    background-color: #636582;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+  }
+
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .input-group input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #424bcf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .captcha
+  {
+      display: block;
+    margin-bottom: 15px;  
+  }
+
+.remember{
+            margin: 10px;
+            padding-left: 45px;
+}
+
+.checkbox{
+  width: 20px;
+  height: 15px;
+}
+
+.captcha input{
+
+  text-transform: uppercase;
+}
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  /* h2:hover {
+  background-color: yellow;
+} */
+

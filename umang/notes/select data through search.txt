@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details Form</title>
+</head>
+<body>
+    <!-- <h2>Student Details Form</h2>
+    <form action="process_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Search Student Details</h2> -->
+    <form action="index.php" method="get">
+        <label for="search">Search by Name or Email:</label>
+        <input type="text" id="search" name="search" placeholder="Name" required><br><br>
+
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
+
+
+
+<?php
+// Database connection parameters
+$servername = "localhost";
+$username = "root";
+$password = "*1Sansoftwares#";
+$dbname = "santest";
+
+// Create connection
+$conn =mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if (isset($_GET['search'])) {
+    $search = htmlspecialchars($_GET['search']);
+    $search = mysqli_real_escape_string($conn, $search);
+
+    // Prepare the SQL query
+    $sql = "SELECT * FROM student WHERE name LIKE '%$search%' OR email LIKE '%$search%'";
+    $result = (mysqli_query($conn ,$sql));
+
+    if (mysqli_num_rows($result) > 0) {
+        echo "<h1>Search Results</h1>";
+        echo "<table border='5'>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>email</th>
+                <th>course</th>
+                <th>Created At</th>
+              </tr>";
+
+        // Output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>
+                    <td>" . $row["ID"]. "</td>
+                    <td>" . $row["Name"]. "</td>
+                    <td>" . $row["email"]. "</td>
+                    <td>" . $row["course"]. "</td>
+                    <td>" . $row["reg_date"]. "</td>
+                  </tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "No results found";
+    }
+}
+
+// Close the connection
+$conn->close();
+?>

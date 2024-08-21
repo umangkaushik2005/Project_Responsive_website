@@ -1,0 +1,31 @@
+*{
+	color: yellow;
+}
+
+.container{
+
+	height: 600px;
+	background-color: black;
+	border: 5px solid yellow;
+
+}
+
+
+.input-group {
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+
+button{
+
+	background-color: yellow;
+}
+
+
+h3{
+
+	color: yellow;
+
+	text-align: center;
+    padding: 20px;
+}
